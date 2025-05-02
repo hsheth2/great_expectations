@@ -38,9 +38,9 @@ def get_extras_require():
     rx_fname_part = re.compile(rf"{requirements_dir}/requirements-dev-(.*).txt")
     for fname in glob(f"{requirements_dir}/*.txt"):
         match = rx_fname_part.match(fname)
-        assert (
-            match is not None
-        ), f"The extras requirements dir ({requirements_dir}) contains files that do not adhere to the following format: requirements-dev-*.txt"
+        assert match is not None, (
+            f"The extras requirements dir ({requirements_dir}) contains files that do not adhere to the following format: requirements-dev-*.txt"
+        )
         key = match.group(1)
         if key in ignore_keys:
             continue
@@ -88,7 +88,7 @@ config = {
     "entry_points": {
         "console_scripts": ["great_expectations=great_expectations.cli:main"]
     },
-    "name": "great_expectations",
+    "name": "acryl_great_expectations",
     "long_description": long_description,
     "license": "Apache-2.0",
     "keywords": "data science testing pipeline data quality dataquality validation datavalidation",
