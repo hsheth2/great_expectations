@@ -153,7 +153,6 @@ class GXDependencies:
         "thrift-sasl",
         # requirements-dev-tools.txt
         "jupyter",
-        "jupyterlab",
         "matplotlib",
         # requirements-dev-all-contrib-expectations.txt
         "arxiv",
